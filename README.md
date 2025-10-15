@@ -6,10 +6,10 @@ This is an educational project on data cleaning and preparation using SQL. The o
 
 ## View data
 Use query to view data:
----sql
+```sql
 SELECT * FROM club_member_info cmi
 Limit 5;
----
+```
 Results:
 |full_name|age|martial_status|email|phone|full_address|job_title|membership_date|
 |---------|---|--------------|-----|-----|------------|---------|---------------|
