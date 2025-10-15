@@ -97,3 +97,7 @@ full_name
 HAVING COUNT(*)>1
 )
 ```
+```sql
+SELECT TRIM(full_name)
+FROM club_member_info_cleaned
+```
