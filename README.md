@@ -37,7 +37,7 @@ copy data to new table
 INSERT INTO club_member_info_cleaned
 SELECT * FROM club_member_info;
 ```
-## 3. Create a cleaned table
+## 3. Cleaned data
 Duplicate
 ```sql
 SELECT 
@@ -61,4 +61,39 @@ full_name
 ,job_title 
 ,membership_date 
 HAVING COUNT(*)>1
+```
+Delete duplicate
+```sql
+DELETE FROM club_member_info_cleaned 
+WHERE (
+full_name
+,age
+,martial_status
+,email
+,phone
+,full_address
+,job_title 
+,membership_date 
+) IN (
+SELECT 
+full_name
+,age
+,martial_status
+,email
+,phone
+,full_address
+,job_title 
+,membership_date 
+FROM club_member_info_cleaned
+GROUP BY
+full_name
+,age
+,martial_status
+,email
+,phone
+,full_address
+,job_title 
+,membership_date 
+HAVING COUNT(*)>1
+)
 ```
