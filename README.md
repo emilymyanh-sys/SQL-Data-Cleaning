@@ -37,3 +37,28 @@ copy data to new table
 INSERT INTO club_member_info_cleaned
 SELECT * FROM club_member_info;
 ```
+## 3. Create a cleaned table
+Duplicate
+```sql
+SELECT 
+full_name
+,age
+,martial_status
+,email
+,phone
+,full_address
+,job_title 
+,membership_date 
+,COUNT(*) AS Count_duplicate
+FROM club_member_info_cleaned
+GROUP BY
+full_name
+,age
+,martial_status
+,email
+,phone
+,full_address
+,job_title 
+,membership_date 
+HAVING COUNT(*)>1
+```
