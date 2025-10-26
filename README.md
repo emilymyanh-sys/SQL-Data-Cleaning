@@ -97,7 +97,27 @@ full_name
 HAVING COUNT(*)>1
 )
 ```
+TRIM
 ```sql
 SELECT TRIM(full_name)
 FROM club_member_info_cleaned
+UPDATE club_member_info_cleaned 
+SET full_name = TRIM(full_name)
+```
+UPPER
+```sql
+SELECT UPPER(full_name)
+FROM club_member_info_cleaned
+
+UPDATE club_member_info_cleaned 
+SET full_name = UPPER(full_name)
+
+SELECT full_name
+FROM club_member_info_cleaned
+WHERE full_name ="";
+```
+DISTINCT
+```sql
+SELECT DISTINCT(martial_status) 
+FROM club_member_info_cleaned)
 ```
