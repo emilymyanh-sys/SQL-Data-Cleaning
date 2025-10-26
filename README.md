@@ -127,6 +127,15 @@ WHERE age>100;
 ```
 DISTINCT
 ```sql
-SELECT DISTINCT(LTRIM(RTRIM(martial_status))) AS martial_status
+SELECT DISTINCT
+    LTRIM(RTRIM(full_name)) AS full_name,
+    LTRIM(RTRIM(age)) AS age,
+    LTRIM(RTRIM(martial_status)) AS martial_status,
+    LTRIM(RTRIM(email)) AS email,
+    LTRIM(RTRIM(phone)) AS phone,
+    LTRIM(RTRIM(full_address)) AS full_address,
+    LTRIM(RTRIM(job_title)) AS job_title,
+    LTRIM(RTRIM(membership_date)) AS membership_date
 FROM club_member_info_cleaned
 ```
+Results:
