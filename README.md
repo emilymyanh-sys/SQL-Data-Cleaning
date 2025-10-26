@@ -138,4 +138,4 @@ SELECT DISTINCT
     LTRIM(RTRIM(membership_date)) AS membership_date
 FROM club_member_info_cleaned
 ```
-Results:
+
