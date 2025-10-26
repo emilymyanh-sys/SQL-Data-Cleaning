@@ -127,6 +127,6 @@ WHERE age>100;
 ```
 DISTINCT
 ```sql
-SELECT DISTINCT(martial_status) 
-FROM club_member_info_cleaned)
+SELECT DISTINCT(LTRIM(RTRIM(martial_status))) AS martial_status
+FROM club_member_info_cleaned
 ```
