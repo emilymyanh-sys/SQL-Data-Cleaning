@@ -116,6 +116,15 @@ SELECT full_name
 FROM club_member_info_cleaned
 WHERE full_name ="";
 ```
+```sql
+SELECT age
+FROM club_member_info_cleaned
+WHERE age>100;
+
+UPDATE club_member_info_cleaned 
+SET age = (SELECT MODE(age) FROM club_member_info_cleaned)
+WHERE age>100;
+```
 DISTINCT
 ```sql
 SELECT DISTINCT(martial_status) 
